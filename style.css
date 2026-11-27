@@ -1,6 +1,6 @@
 :root {
-  --bg-dark: #090d16;
-  --card-bg: rgba(20, 28, 46, 0.85);
+  --bg-dark: #070b14;
+  --card-bg: rgba(15, 23, 42, 0.85);
   --accent-red: #ef4444;
   --accent-blue: #3b82f6;
   --text-main: #f8fafc;
@@ -23,16 +23,37 @@ body {
   flex-direction: column;
 }
 
-/* Subtle Tech Grid Background */
-.bg-grid {
+/* Fullscreen Room Scene Backdrop */
+.room-scene {
   position: fixed;
   inset: 0;
-  background-image: 
-    radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.14), transparent 60%),
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 100% 100%, 40px 40px, 40px 40px;
   z-index: -1;
+  pointer-events: none;
+}
+
+.room-scene svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Subtle AC Airflow & RGB Pulse Animations */
+.ac-air {
+  animation: blowAir 2.2s ease-in-out infinite;
+}
+
+@keyframes blowAir {
+  0%, 100% { opacity: 0.15; transform: translateY(0px); }
+  50% { opacity: 0.65; transform: translateY(8px); }
+}
+
+.rgb-fan {
+  animation: pulseRgb 3s linear infinite;
+}
+
+@keyframes pulseRgb {
+  0%, 100% { filter: drop-shadow(0 0 4px currentColor); opacity: 0.85; }
+  50% { filter: drop-shadow(0 0 10px currentColor); opacity: 1; }
 }
 
 /* Top Navigation & Social Icons */
@@ -41,6 +62,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 3rem;
+  background: rgba(7, 11, 20, 0.72);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 10;
@@ -65,8 +87,8 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--text-main);
   display: flex;
   align-items: center;
@@ -117,7 +139,7 @@ body {
   border-radius: 18px;
   max-width: 270px;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
   position: relative;
   margin-bottom: 0.75rem;
   transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.25s ease;
@@ -147,7 +169,7 @@ body {
 #avatar {
   width: 240px;
   height: auto;
-  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.75));
 }
 
 /* Idle Breathing Animation */
@@ -164,7 +186,7 @@ body {
 /* Surrounding Clickable Blocks */
 .orbit-card {
   background: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   color: var(--text-main);
   padding: 1.5rem 2rem;
   border-radius: 20px;
@@ -177,7 +199,7 @@ body {
   font-size: 1.05rem;
   font-weight: 600;
   backdrop-filter: blur(12px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.3s ease, box-shadow 0.3s ease;
   animation: floatCard 4s ease-in-out infinite;
 }
@@ -191,7 +213,7 @@ body {
 .orbit-card:hover {
   transform: translateY(-8px) scale(1.06);
   border-color: var(--accent-red);
-  box-shadow: 0 16px 35px rgba(239, 68, 68, 0.3);
+  box-shadow: 0 16px 35px rgba(239, 68, 68, 0.35);
   animation-play-state: paused;
 }
 
