@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Johan M Joseph | Interactive Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Garage Tech Studio Backdrop: BMW M4 CS (Left), BMW S1000 RR (Right), AC & Sticky Notes -->
+  <div class="room-scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Industrial Garage Wall & Concrete Floor -->
+        <linearGradient id="garageWall" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#090d16" />
+          <stop offset="65%" stop-color="#131a29" />
+          <stop offset="100%" stop-color="#0b0f19" />
+        </linearGradient>
+        <linearGradient id="concreteFloor" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#161b26" />
+          <stop offset="100%" stop-color="#07090f" />
+        </linearGradient>
+        <!-- BMW M4 CS Metallic Isle of Man Green / Frozen Dark Blue Finish -->
+        <linearGradient id="m4Body" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#065f46" />
+          <stop offset="50%" stop-color="#047857" />
+          <stop offset="100%" stop-color="#022c22" />
+        </linearGradient>
+        <!-- BMW S1000 RR M-Motorsport White/Blue/Red Fairing -->
+        <linearGradient id="s1kBody" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#f8fafc" />
+          <stop offset="65%" stop-color="#e2e8f0" />
+          <stop offset="100%" stop-color="#94a3b8" />
+        </linearGradient>
+        <!-- Monitor Glow -->
+        <linearGradient id="screenGlow" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#022c22" />
+          <stop offset="100%" stop-color="#052e16" />
+        </linearGradient>
+        <linearGradient id="rgbStrip" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ef4444" />
+          <stop offset="50%" stop-color="#3b82f6" />
+          <stop offset="100%" stop-color="#10b981" />
+        </linearGradient>
+      </defs>
+
+      <!-- Garage Back Wall & Epoxy Concrete Floor -->
+      <rect width="1440" height="690" fill="url(#garageWall)" />
+      <rect y="690" width="1440" height="210" fill="url(#concreteFloor)" />
+      <!-- Yellow/Black Garage Hazard Floor Trim -->
+      <rect y="684" width="1440" height="8" fill="#1e293b" />
+      <line x1="0" y1="740" x2="1440" y2="740" stroke="rgba(255,255,255,0.04)" stroke-width="2" />
+      <line x1="0" y1="815" x2="1440" y2="815" stroke="rgba(255,255,255,0.04)" stroke-width="2" />
+
+      <!-- Overhead Industrial Garage Ceiling Lights -->
+      <g transform="translate(260, 28)">
+        <rect x="0" y="0" width="220" height="10" rx="5" fill="#e2e8f0" />
+        <polygon points="10,10 210,10 270,220 -50,220" fill="rgba(226, 232, 240, 0.035)" />
+      </g>
+      <g transform="translate(960, 28)">
+        <rect x="0" y="0" width="220" height="10" rx="5" fill="#e2e8f0" />
+        <polygon points="10,10 210,10 270,220 -50,220" fill="rgba(226, 232, 240, 0.035)" />
+      </g>
+
+      <!-- Wall-Mounted Split AC Unit (Top Right) -->
+      <g transform="translate(1090, 72)">
+        <rect x="0" y="0" width="275" height="66" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2" />
+        <rect x="12" y="46" width="251" height="10" rx="3" fill="#334155" />
+        <line x1="16" y1="51" x2="259" y2="51" stroke="#38bdf8" stroke-width="2" />
+        <circle cx="247" cy="21" r="4" fill="#22c55e" />
+        <text x="22" y="25" fill="#475569" font-size="11" font-weight="bold" font-family="monospace">18°C COOL</text>
+        <path class="ac-air" d="M45 70 Q60 90 45 110" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.5" />
+        <path class="ac-air" d="M138 70 Q153 90 138 110" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.5" />
+        <path class="ac-air" d="M230 70 Q245 90 230 110" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" opacity="0.5" />
+      </g>
+
+      <!-- Sticky Notes & Spec Board on Left Garage Wall -->
+      <g transform="translate(115, 135)">
+        <rect x="-12" y="-12" width="245" height="190" rx="8" fill="#1e293b" stroke="#334155" stroke-width="3" />
+        <rect x="8" y="8" width="60" height="60" transform="rotate(-4 38 38)" fill="#fef08a" />
+        <line x1="15" y1="24" x2="56" y2="21" stroke="#854d0e" stroke-width="2" />
+        <line x1="15" y1="35" x2="48" y2="33" stroke="#854d0e" stroke-width="2" />
+        <circle cx="38" cy="12" r="3" fill="#ef4444" />
+
+        <rect x="82" y="10" width="60" height="60" transform="rotate(3 112 40)" fill="#f472b6" />
+        <line x1="90" y1="26" x2="132" y2="28" stroke="#831843" stroke-width="2" />
+        <circle cx="112" cy="14" r="3" fill="#3b82f6" />
+
+        <rect x="155" y="9" width="60" height="60" transform="rotate(-2 185 39)" fill="#4ade80" />
+        <line x1="163" y1="25" x2="205" y2="24" stroke="#14532d" stroke-width="2" />
+        <circle cx="185" cy="13" r="3" fill="#eab308" />
+
+        <rect x="14" y="86" width="64" height="64" transform="rotate(5 46 118)" fill="#38bdf8" />
+        <line x1="22" y1="104" x2="68" y2="107" stroke="#0c4a6e" stroke-width="2" />
+        <circle cx="46" cy="90" r="3" fill="#ef4444" />
+
+        <rect x="94" y="88" width="64" height="64" transform="rotate(-4 126 120)" fill="#fb923c" />
+        <line x1="102" y1="106" x2="148" y2="103" stroke="#7c2d12" stroke-width="2" />
+        <circle cx="126" cy="92" r="3" fill="#22c55e" />
+
+        <rect x="168" y="90" width="52" height="56" transform="rotate(2 194 118)" fill="#fef08a" />
+        <line x1="175" y1="108" x2="210" y2="109" stroke="#854d0e" stroke-width="2" />
+        <circle cx="194" cy="94" r="3" fill="#ef4444" />
+      </g>
+
+      <!-- LEFT GARAGE BAY: BMW M4 CS -->
+      <g transform="translate(35, 515)">
+        <!-- Car Floor Shadow -->
+        <ellipse cx="195" cy="188" rx="185" ry="18" fill="rgba(0,0,0,0.72)" />
+        <!-- Carbon Fiber Rear Spoiler -->
+        <path d="M22 86 L42 64 L54 66 L44 88 Z" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+        <!-- M4 CS Coupe Body Silhouette -->
+        <path d="M24 138 L28 96 Q45 84 95 78 L148 44 Q205 40 258 76 L352 94 Q374 102 376 132 L372 154 L24 154 Z" fill="url(#m4Body)" stroke="#10b981" stroke-width="1.5" />
+        <!-- Tinted Side Windows -->
+        <path d="M112 76 L152 50 Q198 48 242 76 Z" fill="#090d16" stroke="#334155" stroke-width="1.5" />
+        <line x1="178" y1="49" x2="174" y2="76" stroke="#1e293b" stroke-width="3" />
+        <!-- CS Red Hood & Grille Accents + Yellow DRL Headlight -->
+        <path d="M275 84 L344 96" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" />
+        <polygon points="348,106 373,110 368,120 344,116" fill="#facc15" />
+        <polygon points="348,106 373,110 368,120 344,116" fill="rgba(250, 204, 21, 0.45)" filter="blur(3px)" />
+        <!-- Carbon Side Skirt -->
+        <rect x="95" y="148" width="195" height="8" rx="2" fill="#0f172a" />
+        <!-- M4 CS Badge Label -->
+        <text x="128" y="116" fill="#ecfdf5" font-family="monospace" font-size="11" font-weight="bold" opacity="0.85">BMW M4 CS</text>
+        <!-- Rear Forged Gold/Bronze Wheel -->
+        <circle cx="82" cy="152" r="34" fill="#090d16" stroke="#1e293b" stroke-width="4" />
+        <circle cx="82" cy="152" r="21" fill="#1e293b" stroke="#d97706" stroke-width="2.5" />
+        <circle cx="82" cy="152" r="7" fill="#ef4444" />
+        <!-- Front Forged Gold/Bronze Wheel -->
+        <circle cx="308" cy="152" r="34" fill="#090d16" stroke="#1e293b" stroke-width="4" />
+        <circle cx="308" cy="152" r="21" fill="#1e293b" stroke="#d97706" stroke-width="2.5" />
+        <circle cx="308" cy="152" r="7" fill="#ef4444" />
+      </g>
+
+      <!-- RIGHT GARAGE BAY: BMW S1000 RR -->
+      <g transform="translate(1055, 520)">
+        <!-- Bike Shadow -->
+        <ellipse cx="155" cy="184" rx="145" ry="15" fill="rgba(0,0,0,0.72)" />
+        <!-- Rear Tire & Swingarm -->
+        <circle cx="68" cy="144" r="38" fill="#090d16" stroke="#1e293b" stroke-width="5" />
+        <circle cx="68" cy="144" r="22" fill="#111827" stroke="#3b82f6" stroke-width="2.5" />
+        <path d="M68 144 L138 134 L145 146 L72 150 Z" fill="#475569" />
+        <!-- Titanium Akrapovic Exhaust -->
+        <path d="M122 146 L78 126 L84 118 L130 140 Z" fill="#94a3b8" />
+        <!-- Tail Section & Rider Seat -->
+        <path d="M44 76 L112 94 L144 96 L124 114 L58 92 Z" fill="url(#s1kBody)" />
+        <path d="M106 92 Q132 98 154 88 L150 98 L108 98 Z" fill="#0f172a" />
+        <!-- Fuel Tank & Aggressive Shark-Gill Fairing (White / M-Blue / Red) -->
+        <path d="M132 88 Q166 64 202 78 L236 96 L216 144 L142 140 Z" fill="url(#s1kBody)" stroke="#cbd5e1" stroke-width="1.5" />
+        <!-- M Motorsport Stripes -->
+        <path d="M154 86 L214 102 L208 112 L150 96 Z" fill="#2563eb" />
+        <path d="M150 96 L208 112 L204 120 L148 104 Z" fill="#ef4444" />
+        <!-- Tinted Windscreen & Asymmetric LED Headlight -->
+        <path d="M196 76 L224 54 L236 82 Z" fill="#0f172a" opacity="0.88" />
+        <polygon points="228,88 244,94 236,102 222,96" fill="#38bdf8" />
+        <!-- Gold Upside-Down Front Forks -->
+        <line x1="208" y1="84" x2="246" y2="146" stroke="#eab308" stroke-width="6" stroke-linecap="round" />
+        <!-- Front Tire -->
+        <circle cx="246" cy="146" r="36" fill="#090d16" stroke="#1e293b" stroke-width="5" />
+        <circle cx="246" cy="146" r="21" fill="#111827" stroke="#ef4444" stroke-width="2.5" />
+        <!-- S1000 RR Label -->
+        <text x="115" y="62" fill="#f8fafc" font-family="monospace" font-size="11" font-weight="bold" opacity="0.85">BMW S1000 RR</text>
+      </g>
+
+      <!-- CENTER PC DESK SETUP (Behind Seated Coding Character) -->
+      <g transform="translate(360, 355)">
+        <!-- Left Monitor (Angled) -->
+        <g transform="translate(0, 18) skewY(6)">
+          <rect x="0" y="0" width="185" height="125" rx="6" fill="#0f172a" stroke="#334155" stroke-width="4" />
+          <rect x="8" y="8" width="169" height="109" fill="url(#screenGlow)" />
+          <g fill="#22c55e" font-family="monospace" font-size="9">
+            <text x="14" y="24">$ git status</text>
+            <text x="14" y="38">branch: main [clean]</text>
+            <text x="14" y="54">build: PASSED (0 err)</text>
+            <text x="14" y="70">mem: 4.2GB / 32GB</text>
+            <text x="14" y="86">[+] Compiling modules...</text>
+            <text x="14" y="102">[OK] Ready to deploy</text>
+          </g>
+          <rect x="78" y="125" width="28" height="26" fill="#1e293b" />
+          <rect x="55" y="148" width="74" height="6" rx="3" fill="#334155" />
+        </g>
+
+        <!-- Center Main Monitor -->
+        <g transform="translate(200, 0)">
+          <rect x="0" y="0" width="230" height="145" rx="6" fill="#0f172a" stroke="#475569" stroke-width="4" />
+          <rect x="8" y="8" width="214" height="129" fill="url(#screenGlow)" />
+          <g fill="#4ade80" font-family="monospace" font-size="10">
+            <text x="16" y="25">JOHAN@GARAGE-DEV:~# code .</text>
+            <text x="16" y="42" fill="#38bdf8">function buildPortfolio() {</text>
+            <text x="26" y="58">const stack = ["C", "Java", "JS"];</text>
+            <text x="26" y="74">return deploy(stack);</text>
+            <text x="16" y="90" fill="#38bdf8">}</text>
+            <rect x="16" y="102" width="140" height="8" rx="2" fill="#064e3b" />
+            <rect x="16" y="102" width="118" height="8" rx="2" fill="#22c55e" />
+            <text x="162" y="110" font-size="9">92%</text>
+          </g>
+          <rect x="98" y="145" width="34" height="30" fill="#1e293b" />
+          <rect x="70" y="172" width="90" height="7" rx="3" fill="#334155" />
+        </g>
+
+        <!-- Right Monitor (Angled) -->
+        <g transform="translate(445, 36) skewY(-6)">
+          <rect x="0" y="0" width="185" height="125" rx="6" fill="#0f172a" stroke="#334155" stroke-width="4" />
+          <rect x="8" y="8" width="169" height="109" fill="url(#screenGlow)" />
+          <polyline points="16,95 42,72 68,84 96,42 125,60 152,26 168,38" fill="none" stroke="#22c55e" stroke-width="2.5" />
+          <text x="16" y="24" fill="#38bdf8" font-family="monospace" font-size="9">CPU_LOAD // 34% @ 4.8GHz</text>
+          <text x="16" y="108" fill="#4ade80" font-family="monospace" font-size="8">TEMP: 46°C | PING: 11ms</text>
+          <rect x="78" y="125" width="28" height="26" fill="#1e293b" />
+          <rect x="55" y="148" width="74" height="6" rx="3" fill="#334155" />
+        </g>
+
+        <!-- Desk Surface & Legs -->
+        <rect x="-50" y="178" width="820" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="2" />
+        <rect x="-25" y="200" width="18" height="175" fill="#0f172a" />
+        <rect x="727" y="200" width="18" height="175" fill="#0f172a" />
+
+        <!-- RGB Gaming CPU Tower -->
+        <g transform="translate(640, 22)">
+          <rect x="0" y="0" width="88" height="156" rx="8" fill="#090d16" stroke="#475569" stroke-width="3" />
+          <rect x="10" y="12" width="52" height="132" rx="4" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
+          <circle cx="36" cy="40" r="16" fill="none" stroke="#ef4444" stroke-width="3" class="rgb-fan" />
+          <circle cx="36" cy="40" r="6" fill="#ef4444" />
+          <circle cx="36" cy="80" r="16" fill="none" stroke="#3b82f6" stroke-width="3" class="rgb-fan" />
+          <circle cx="36" cy="80" r="6" fill="#3b82f6" />
+          <circle cx="36" cy="120" r="16" fill="none" stroke="#10b981" stroke-width="3" class="rgb-fan" />
+          <circle cx="36" cy="120" r="6" fill="#10b981" />
+          <rect x="72" y="10" width="6" height="136" rx="3" fill="url(#rgbStrip)" />
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Top Social Bar -->
+  <header class="top-bar">
+    <div class="brand">JOHAN M <span>JOSEPH</span></div>
+    <nav class="social-links" aria-label="Social Media Links">
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:johan@example.com" aria-label="Email" title="Send Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Interactive Stage -->
+  <main class="stage">
+    <!-- Top Left Card -->
+    <button class="orbit-card card-1" 
+      data-speech="Wanna know about me? Click here to see what drives me!" 
+      data-target="modal-about">
+      <i class="fas fa-user-astronaut"></i>
+      <span>About Me</span>
+    </button>
+
+    <!-- Bottom Left Card -->
+    <button class="orbit-card card-2" 
+      data-speech="Check out my academic journey and CS background!" 
+      data-target="modal-education">
+      <i class="fas fa-graduation-cap"></i>
+      <span>My Education</span>
+    </button>
+
+    <!-- Center Character Seated & Coding at PC (Red Cap, Nice Hair, Moustache & Goatee) -->
+    <div class="character-hub">
+      <div class="speech-bubble" id="speechBubble">
+        Hey there! Click any block around me to explore my world!
+      </div>
+
+      <svg id="avatar" viewBox="0 0 300 430" xmlns="http://www.w3.org/2000/svg">
+        <!-- Floor Shadow -->
+        <ellipse cx="150" cy="416" rx="86" ry="12" fill="rgba(0,0,0,0.65)" />
+
+        <!-- Ergonomic Gaming Chair Backrest (Behind Character) -->
+        <g class="chair-back">
+          <path d="M84 148 Q150 132 216 148 L224 285 Q150 295 76 285 Z" fill="#111827" stroke="#334155" stroke-width="3" />
+          <path d="M96 156 L104 276" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" />
+          <path d="M204 156 L196 276" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" />
+          <!-- Chair Hydraulic Stem & 5-Star Base -->
+          <rect x="143" y="305" width="14" height="82" fill="#334155" />
+          <path d="M150 385 L88 408 M150 385 L212 408 M150 385 L150 412" stroke="#475569" stroke-width="6" stroke-linecap="round" />
+          <circle cx="88" cy="410" r="5" fill="#94a3b8" />
+          <circle cx="212" cy="410" r="5" fill="#94a3b8" />
+          <circle cx="150" cy="414" r="5" fill="#94a3b8" />
+        </g>
+
+        <!-- Seated Legs (Blue Jeans Bent at Knee) & Nike Sneakers -->
+        <g class="seated-legs">
+          <!-- Chair Seat Cushion -->
+          <rect x="82" y="286" width="136" height="18" rx="8" fill="#1e293b" stroke="#ef4444" stroke-width="2" />
+          <!-- Left Leg (Thigh & Shin) -->
+          <path d="M96 284 L142 284 L136 378 L106 378 Z" fill="#1d4ed8" />
+          <path d="M96 284 L106 284 L112 378 L106 378 Z" fill="#1e40af" />
+          <!-- Right Leg (Thigh & Shin) -->
+          <path d="M158 284 L204 284 L194 378 L164 378 Z" fill="#1d4ed8" />
+          <path d="M194 284 L204 284 L194 378 L188 378 Z" fill="#1e40af" />
+
+          <!-- Left Nike Sneaker -->
+          <path d="M94 378 L136 378 L138 402 L82 402 C82 390 88 382 94 378 Z" fill="#f8fafc" />
+          <rect x="82" y="400" width="56" height="7" rx="3" fill="#e11d48" />
+          <path d="M94 392 Q110 397 128 385 Q112 392 96 389 Z" fill="#0f172a" />
+
+          <!-- Right Nike Sneaker -->
+          <path d="M164 378 L206 378 C212 382 218 390 218 402 L162 402 Z" fill="#f8fafc" />
+          <rect x="162" y="400" width="56" height="7" rx="3" fill="#e11d48" />
+          <path d="M206 392 Q190 397 172 385 Q188 392 204 389 Z" fill="#0f172a" />
+        </g>
+
+        <!-- Upper Body (Breathing & Typing Group) -->
+        <g class="upper-body">
+          <!-- Black T-Shirt Torso -->
+          <path d="M104 166 Q150 158 196 166 L192 286 L108 286 Z" fill="#111827" />
+          <path d="M130 164 Q150 178 170 164" fill="none" stroke="#374151" stroke-width="3" />
+
+          <!-- Neck -->
+          <rect x="138" y="142" width="24" height="24" rx="8" fill="#d49872" />
+
+          <!-- Head (With Nice Hair, Red Cap, Moustache & Goatee) -->
+          <g id="headGroup">
+            <!-- Ears -->
+            <circle cx="108" cy="114" r="9" fill="#d49872" />
+            <circle cx="192" cy="114" r="9" fill="#d49872" />
+
+            <!-- Nice Clean Side Hair Peeking Under Cap -->
+            <path d="M106 104 L105 84 L114 84 L112 102 Z" fill="#18181b" />
+            <path d="M194 104 L195 84 L186 84 L188 102 Z" fill="#18181b" />
+
+            <!-- Face Shape -->
+            <path d="M110 84 L190 84 L187 126 Q185 152 150 155 Q115 152 113 126 Z" fill="#e0a986" />
+
+            <!-- Moustache & Goatee Beard Only -->
+            <path d="M135 132 Q150 127 165 132 L164 136 Q150 132 136 136 Z" fill="#18181b" />
+            <path d="M143 142 L157 142 L155 153 Q150 155 145 153 Z" fill="#18181b" />
+
+            <!-- Friendly Smirk -->
+            <path d="M141 138.5 Q150 141.5 159 138.5" fill="none" stroke="#7c2d12" stroke-width="2" stroke-linecap="round" />
+
+            <!-- Nose -->
+            <path d="M150 108 L146 122 L153 123" fill="none" stroke="#b87d56" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+
+            <!-- Eyebrows -->
+            <path d="M123 98 Q133 94 142 98" fill="none" stroke="#18181b" stroke-width="3.2" stroke-linecap="round" />
+            <path d="M158 98 Q167 94 177 98" fill="none" stroke="#18181b" stroke-width="3.2" stroke-linecap="round" />
+
+            <!-- Eyes (Track Mouse Cursor) -->
+            <g id="eyesGroup">
+              <circle cx="133" cy="108" r="8.5" fill="#ffffff" />
+              <circle cx="167" cy="108" r="8.5" fill="#ffffff" />
+
+              <g id="leftPupil">
+                <circle cx="133" cy="108" r="4.2" fill="#0f172a" />
+                <circle cx="134.5" cy="106.5" r="1.4" fill="#ffffff" />
+              </g>
+              <g id="rightPupil">
+                <circle cx="167" cy="108" r="4.2" fill="#0f172a" />
+                <circle cx="168.5" cy="106.5" r="1.4" fill="#ffffff" />
+              </g>
+            </g>
+
+            <!-- Nice Textured Hair Front Fringe Under Cap -->
+            <path d="M108 86 C116 74 134 75 150 78 C166 75 184 74 192 86 C176 80 124 80 108 86 Z" fill="#18181b" />
+
+            <!-- Red Cap -->
+            <g class="red-cap">
+              <path d="M108 83 C108 49 192 49 192 83 Z" fill="#dc2626" />
+              <circle cx="150" cy="55" r="3.5" fill="#991b1b" />
+              <path d="M150 56 L150 80" stroke="#b91c1c" stroke-width="1.8" />
+              <path d="M106 81 Q150 73 194 81 Q198 89 150 86 Q102 89 106 81 Z" fill="#991b1b" />
+            </g>
+          </g>
+
+          <!-- Foreground Coding Desk & Mechanical Keyboard Setup -->
+          <g class="coding-station">
+            <!-- Arms Reaching Forward to Keyboard -->
+            <path d="M104 174 L84 228 L122 252 L130 240 L102 222 L114 186 Z" fill="#111827" />
+            <path d="M196 174 L216 228 L178 252 L170 240 L198 222 L186 186 Z" fill="#111827" />
+
+            <!-- Mini Coding Desk Tray in Front -->
+            <rect x="46" y="256" width="208" height="12" rx="4" fill="#334155" stroke="#475569" stroke-width="1.5" />
+            <!-- Mechanical RGB Keyboard -->
+            <polygon points="94,246 206,246 214,256 86,256" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" />
+            <line x1="98" y1="251" x2="202" y2="251" stroke="#22c55e" stroke-width="2" stroke-dasharray="6 3" />
+
+            <!-- Animated Typing Hands on Keyboard -->
+            <circle class="hand-left" cx="126" cy="245" r="8" fill="#e0a986" />
+            <circle class="hand-right" cx="174" cy="245" r="8" fill="#e0a986" />
+
+            <!-- Sleek Laptop / Coding Deck Lid (Back Facing User, Glowing Logo) -->
+            <polygon points="104,204 196,204 190,245 110,245" fill="#1e293b" stroke="#64748b" stroke-width="2" />
+            <circle cx="150" cy="224" r="7" fill="#38bdf8" opacity="0.85" />
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Top Right Card -->
+    <button class="orbit-card card-3" 
+      data-speech="I have hella achievements and cool projects! Wanna see?" 
+      data-target="modal-projects">
+      <i class="fas fa-code"></i>
+      <span>My Projects</span>
+    </button>
+
+    <!-- Bottom Right Card -->
+    <button class="orbit-card card-4" 
+      data-speech="Beyond coding—check out my extra curricular activities & fields!" 
+      data-target="modal-activities">
+      <i class="fas fa-trophy"></i>
+      <span>Extra Curriculars</span>
+    </button>
+  </main>
+
+  <!-- Pop-up Modals for Each Section -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal-box" id="modal-about">
+      <button class="close-btn">&times;</button>
+      <h2><i class="fas fa-user-astronaut"></i> About Me</h2>
+      <p>Hey! I'm <strong>Johan M Joseph</strong>, a passionate developer and tech enthusiast based in Kochi, Kerala. I love building hands-on software projects, exploring cybersecurity, and turning creative ideas into interactive web experiences.</p>
+      <div class="tags">
+        <span>Problem Solver</span>
+        <span>Web Developer</span>
+        <span>Cybersecurity Enthusiast</span>
+        <span>Football Player</span>
+      </div>
+    </div>
+
+    <div class="modal-box" id="modal-education">
+      <button class="close-btn">&times;</button>
+      <h2><i class="fas fa-graduation-cap"></i> My Education</h2>
+      <div class="timeline-item">
+        <h3>Integrated Master of Computer Applications (MCA)</h3>
+        <p class="sub">Rajagiri College of Social Sciences, Kalamassery</p>
+        <p>Focusing on core computer science, C/Java programming, Database Management Systems (SQL & PL/SQL), and practical software engineering.</p>
+      </div>
+    </div>
+
+    <div class="modal-box" id="modal-projects">
+      <button class="close-btn">&times;</button>
+      <h2><i class="fas fa-code"></i> My Projects & Achievements</h2>
+      <ul class="project-list">
+        <li>
+          <strong>AI-Powered Attendance & Excuse Generator:</strong> Built a web portal integrated with the Gemini API and a Java CLI interface.
+        </li>
+        <li>
+          <strong>Football Player Management System:</strong> Engineered a full CRUD roster and jersey-search system in C using structures and arrays.
+        </li>
+        <li>
+          <strong>Interactive Web Portfolio:</strong> Designed and deployed a custom animated character portfolio on GitHub Pages.
+        </li>
+      </ul>
+    </div>
+
+    <div class="modal-box" id="modal-activities">
+      <button class="close-btn">&times;</button>
+      <h2><i class="fas fa-trophy"></i> Extra Curriculars & Fields</h2>
+      <ul class="project-list">
+        <li>
+          <strong>Cybersecurity Club Student Coordinator:</strong> Organizing hands-on security workshops and technical events at Rajagiri College.
+        </li>
+        <li>
+          <strong>Fields of Interest:</strong> Full-Stack Web Development, Defensive Cybersecurity, System Programming, and UI Animation.
+        </li>
+        <li>
+          <strong>Sports & Hobbies:</strong> Regular competitive football player and die-cast automotive model collector.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Interactive Eye Tracking & Bubble Logic -->
+  <script>
+    const leftPupil = document.getElementById('leftPupil');
+    const rightPupil = document.getElementById('rightPupil');
+    const speechBubble = document.getElementById('speechBubble');
+    const cards = document.querySelectorAll('.orbit-card');
+    const backdrop = document.getElementById('modalBackdrop');
+    const modals = document.querySelectorAll('.modal-box');
+    const closeBtns = document.querySelectorAll('.close-btn');
+
+    const defaultSpeech = "Hey there! Click any block around me to explore my world!";
+
+    document.addEventListener('mousemove', (e) => {
+      moveEye(leftPupil, 133, 108, e.clientX, e.clientY);
+      moveEye(rightPupil, 167, 108, e.clientX, e.clientY);
+    });
+
+    function moveEye(pupilEl, originX, originY, mouseX, mouseY) {
+      const svg = document.getElementById('avatar');
+      const rect = svg.getBoundingClientRect();
+      const scaleX = rect.width / 300;
+      const scaleY = rect.height / 430;
+      const eyeScreenX = rect.left + originX * scaleX;
+      const eyeScreenY = rect.top + originY * scaleY;
+
+      const angle = Math.atan2(mouseY - eyeScreenY, mouseX - eyeScreenX);
+      const maxRadius = 3.2;
+      const offsetX = Math.cos(angle) * maxRadius;
+      const offsetY = Math.sin(angle) * maxRadius;
+
+      pupilEl.setAttribute('transform', `translate(${offsetX}, ${offsetY})`);
+    }
+
+    cards.forEach((card) => {
+      card.addEventListener('mouseenter', () => {
+        speechBubble.textContent = card.getAttribute('data-speech');
+        speechBubble.classList.add('active');
+      });
+
+      card.addEventListener('mouseleave', () => {
+        speechBubble.textContent = defaultSpeech;
+        speechBubble.classList.remove('active');
+      });
+
+      card.addEventListener('click', () => {
+        const targetId = card.getAttribute('data-target');
+        modals.forEach((m) => m.classList.remove('open'));
+        document.getElementById(targetId).classList.add('open');
+        backdrop.classList.add('show');
+      });
+    });
+
+    closeBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        backdrop.classList.remove('show');
+        modals.forEach((m) => m.classList.remove('open'));
+      });
+    });
+
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) {
+        backdrop.classList.remove('show');
+        modals.forEach((m) => m.classList.remove('open'));
+      }
+    });
+  </script>
+</body>
+</html>
